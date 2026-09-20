@@ -1,7 +1,11 @@
 ﻿
 using System.Diagnostics;
+using InterlockedSandBox.Threads;
 
-Sandbox.Run();
+await MonitorSandBox.Run();
+await MonitorSandBox.CrashMonitor();
+
+// Sandbox.Run();
 
 static class Sandbox
 {
